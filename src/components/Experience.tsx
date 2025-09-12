@@ -14,30 +14,6 @@ const Experience: React.FC = () => {
         'Contributed to NLP-based solutions and data processing pipelines',
         'Applied theoretical knowledge to real-world AI applications'
       ]
-    },
-    {
-      title: 'Smart India Hackathon Participant',
-      company: 'Government of India',
-      location: 'India',
-      period: '2024',
-      description: 'Selected participant developing AI-powered solutions for CitySage travel platform and Farm Link agricultural marketplace with focus on real-world problem solving.',
-      achievements: [
-        'Developed AI-integrated travel and agricultural platforms',
-        'Implemented real-time APIs and LLM-based assistants',
-        'Explored Prompt Engineering and RAG concepts'
-      ]
-    },
-    {
-      title: 'Computer Science Student',
-      company: 'GITAM University',
-      location: 'Hyderabad, Telangana',
-      period: '2022 - 2026',
-      description: 'Pursuing Bachelor of Technology in Computer Science and Engineering with specialization in AI & Machine Learning. Active participant in hackathons and technical projects.',
-      achievements: [
-        'Maintaining CGPA of 7.48',
-        'Specialized in AI & Machine Learning',
-        'Participated in multiple hackathons and technical competitions'
-      ]
     }
   ];
 
