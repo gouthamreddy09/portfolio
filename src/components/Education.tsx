@@ -1,0 +1,79 @@
+import React from 'react';
+import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+
+const Education: React.FC = () => {
+  const education = [
+    {
+      degree: 'Bachelor of Technology in Computer Science',
+      institution: 'Your College/University Name',
+      location: 'City, State',
+      period: '2022 - 2026',
+      description: 'Specializing in AI & Machine Learning with focus on Generative AI and prompt engineering.',
+      achievements: [
+        'Relevant coursework in Machine Learning, Data Structures, and Algorithms',
+        'Active participant in coding competitions and hackathons',
+        'Member of AI/ML club and technical societies'
+      ]
+    }
+  ];
+
+  return (
+    <section id="education" className="py-20 bg-gray-800">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="text-blue-400">Education</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            My academic journey and educational background
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          {education.map((edu, index) => (
+            <div key={index} className="relative">
+              <div className="flex items-start mb-12">
+                {/* Education icon */}
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-6 relative z-10">
+                  <GraduationCap className="w-6 h-6 text-white" />
+                </div>
+                
+                <div className="flex-grow bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-1">{edu.degree}</h3>
+                      <p className="text-blue-400 font-semibold">{edu.institution}</p>
+                    </div>
+                    <div className="flex flex-col md:items-end mt-2 md:mt-0">
+                      <div className="flex items-center text-gray-400 text-sm mb-1">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {edu.period}
+                      </div>
+                      <div className="flex items-center text-gray-400 text-sm">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        {edu.location}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4 leading-relaxed">{edu.description}</p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="text-white font-semibold">Highlights:</h4>
+                    <ul className="list-disc list-inside text-gray-300 space-y-1">
+                      {edu.achievements.map((achievement, achievementIndex) => (
+                        <li key={achievementIndex} className="text-sm">{achievement}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Education;

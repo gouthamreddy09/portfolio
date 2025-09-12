@@ -5,7 +5,7 @@ export const useActiveSection = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'projects', 'experience', 'contact'];
+      const sections = ['hero', 'about', 'education', 'projects', 'experience', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
