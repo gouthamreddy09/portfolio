@@ -29,6 +29,19 @@ const Education: React.FC = () => {
     }
   ];
 
+  const intermediateEducation = {
+    degree: 'Intermediate (12th Grade) - MPC Stream',
+    institution: 'Narayana Jr College',
+    location: 'Doctors Colony, Sarron Nagar, Hyderabad',
+    period: '2020 - 2022',
+    description: 'Completed intermediate education in Mathematics, Physics, and Chemistry (MPC) stream under State Board of Telangana.',
+    achievements: [
+      'Achieved 84% in intermediate examinations',
+      'Strong foundation in Mathematics, Physics, and Chemistry',
+      'Prepared for competitive entrance examinations'
+    ]
+  };
+
   return (
     <section id="education" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
@@ -44,6 +57,11 @@ const Education: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {education.map((edu, index) => (
             <div key={index} className="relative">
+              {/* Timeline line */}
+              {index !== education.length - 1 && (
+                <div className="absolute left-6 top-16 w-0.5 h-full bg-blue-400 opacity-30"></div>
+              )}
+              
               <div className="flex items-start mb-12">
                 {/* Education icon */}
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-6 relative z-10">
@@ -82,6 +100,47 @@ const Education: React.FC = () => {
               </div>
             </div>
           ))}
+          
+          {/* Intermediate Education */}
+          <div className="relative">
+            <div className="absolute left-6 top-16 w-0.5 h-full bg-blue-400 opacity-30"></div>
+            
+            <div className="flex items-start mb-12">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-6 relative z-10">
+                <GraduationCap className="w-6 h-6 text-white" />
+              </div>
+              
+              <div className="flex-grow bg-gray-900 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-1">{intermediateEducation.degree}</h3>
+                    <p className="text-blue-400 font-semibold">{intermediateEducation.institution}</p>
+                  </div>
+                  <div className="flex flex-col md:items-end mt-2 md:mt-0">
+                    <div className="flex items-center text-gray-400 text-sm mb-1">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {intermediateEducation.period}
+                    </div>
+                    <div className="flex items-center text-gray-400 text-sm">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      {intermediateEducation.location}
+                    </div>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 mb-4 leading-relaxed">{intermediateEducation.description}</p>
+                
+                <div className="space-y-2">
+                  <h4 className="text-white font-semibold">Highlights:</h4>
+                  <ul className="list-disc list-inside text-gray-300 space-y-1">
+                    {intermediateEducation.achievements.map((achievement, achievementIndex) => (
+                      <li key={achievementIndex} className="text-sm">{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
