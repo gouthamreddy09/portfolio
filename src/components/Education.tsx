@@ -14,6 +14,18 @@ const Education: React.FC = () => {
         'Active participant in coding competitions and hackathons',
         'Member of AI/ML club and technical societies'
       ]
+    },
+    {
+      degree: 'Secondary School Certificate (10th Grade)',
+      institution: 'Narayana School',
+      location: 'Chaitanyapuri, Hyderabad',
+      period: '2020',
+      description: 'Completed secondary education under State Board of Telangana with excellent academic performance.',
+      achievements: [
+        'Achieved 9.8 CGPA',
+        'Strong foundation in Mathematics and Science',
+        'Consistent academic excellence throughout secondary education'
+      ]
     }
   ];
 
