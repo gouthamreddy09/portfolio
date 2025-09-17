@@ -41,9 +41,8 @@ const About: React.FC = () => {
           <div>
             <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
               <div className="w-72 h-72 bg-gray-800 rounded-full flex items-center justify-center">
-                {/* Photo will be added here */}
                 <div className="text-gray-400 text-center">
-                  <p className="text-sm">Photo placeholder</p>
+                  <p className="text-sm">Your photo will appear here</p>
                 </div>
               </div>
             </div>
