@@ -39,11 +39,13 @@ const About: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-              <div className="w-72 h-72 bg-gray-800 rounded-full flex items-center justify-center">
-                <div className="text-gray-400 text-center">
-                  <p className="text-sm">Your photo will appear here</p>
-                </div>
+            <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-full p-2">
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img 
+                  src="/BFD2654D-A55A-4710-8653-058DF5F3DB5B_1_105_c copy.jpeg" 
+                  alt="Goutham Reddy Chellapuram"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
