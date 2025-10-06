@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-white">
-            <span className="text-blue-400">Goutham</span>Portfolio
+            <span className="text-blue-400">Goutham</span>Reddy
           </div>
 
           {/* Desktop Navigation */}
