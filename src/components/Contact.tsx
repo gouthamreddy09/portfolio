@@ -18,6 +18,7 @@ const Contact: React.FC = () => {
 
     try {
       const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email-broken`, {
+      const response = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-email`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
